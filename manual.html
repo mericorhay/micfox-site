@@ -26,15 +26,16 @@
 
   <h2>1 · On the computer</h2>
   <ol>
-    <li>Install <strong>VB‑CABLE</strong> (a free virtual audio device). MicFox
-      plays your phone's mic into <strong>“CABLE Input”</strong>; your meeting app
-      then picks <strong>“CABLE Output”</strong> as its microphone.</li>
-    <li>Run <strong>MicFox</strong> (<code>MicFox.exe</code>).</li>
-    <li>For the virtual camera, once per machine, from an <strong>elevated</strong>
-      terminal:
-      <pre><code>regsvr32 C:\ProgramData\MicFox\micfox_camsource.dll</code></pre>
-      (A proper installer will fold this in.)</li>
-    <li>MicFox shows a QR code and a <code>micfox://pair…</code> link.</li>
+    <li>Download and run
+      <a href="https://github.com/mericorhay/micfox/releases/latest"><strong>MicFox‑1.0.0‑Setup.exe</strong></a>.
+      Click through — one prompt. It installs the app and registers the
+      <strong>“MicFox Camera”</strong> virtual webcam for you.</li>
+    <li>For the microphone, install <strong>VB‑CABLE</strong>, a free virtual
+      audio device, from
+      <a href="https://vb-audio.com/Cable/">vb‑audio.com/Cable</a>. Run it,
+      reboot if it asks. (The camera works without this.)</li>
+    <li>Open <strong>MicFox</strong>. It shows a QR code and a
+      <code>micfox://pair…</code> link.</li>
   </ol>
 
   <h2>2 · On the phone</h2>
@@ -47,7 +48,8 @@
       cable</strong> automatically when the phone is plugged in, otherwise
       <strong>Wi‑Fi</strong> on the same network.</li>
     <li>Tap <strong>Go Live</strong> to send the microphone. Tap
-      <strong>Camera → On</strong> to send video.</li>
+      <strong>Camera → On</strong> to send video. <strong>Settings → Camera</strong>
+      sets the capture quality (720p / 1080p / 4K).</li>
     <li>In your meeting or streaming app, pick <strong>“CABLE Output”</strong> as
       the microphone and <strong>“MicFox Camera”</strong> as the camera.</li>
   </ol>
@@ -68,7 +70,7 @@
       <tr><td>Effects in the chain</td><td>3</td><td>6</td><td>8</td></tr>
       <tr><td>Neural denoise</td><td>—</td><td class="tick">✓</td><td class="tick">✓</td></tr>
       <tr><td>Parametric EQ · noise gate</td><td>—</td><td>—</td><td class="tick">✓</td></tr>
-      <tr><td>Camera capture</td><td>720p</td><td>1080p</td><td>1080p</td></tr>
+      <tr><td>Camera capture</td><td>720p</td><td>1080p</td><td>4K</td></tr>
     </tbody>
   </table>
   <p>Plus and Pro are <strong>one‑time</strong> purchases and restore across your
@@ -80,8 +82,8 @@
     computer app is open. A phone hotspot or a “guest” network usually blocks
     device‑to‑device traffic.</p>
   <h3>“MicFox Camera” isn't in my app's camera list</h3>
-  <p>Run the <code>regsvr32</code> step above from an <strong>Administrator</strong>
-    prompt, then fully quit and reopen the app that lists cameras.</p>
+  <p>Re‑run <strong>MicFox‑1.0.0‑Setup.exe</strong> (it registers the camera), then
+    fully quit and reopen the app that lists cameras.</p>
   <h3>No sound in my meeting</h3>
   <p>The meeting app's microphone must be set to <strong>“CABLE Output
     (VB‑Audio Virtual Cable)”</strong>, and MicFox's output device (in the
