@@ -43,10 +43,11 @@ header .wrap {
   font-weight: 800; letter-spacing: 0.2px; color: var(--text);
 }
 .brand .mark {
-  width: 26px; height: 26px; border-radius: 7px;
-  background: var(--accent-soft);
-  display: grid; place-items: center;
-  color: var(--accent); font-size: 15px;
+  /* The mark is transparent artwork with its own silhouette, so it wants air
+     around it rather than a tinted tile behind it. */
+  width: 28px; height: 28px;
+  object-fit: contain;
+  display: block;
 }
 header nav { margin-left: auto; display: flex; gap: 20px; font-size: 14px; }
 header nav a { color: var(--text-2); }
@@ -121,3 +122,11 @@ footer a { color: var(--text-2); }
 
 .doc h1 { font-size: 30px; letter-spacing: -0.4px; margin: 40px 0 6px; }
 .doc .updated { color: var(--text-3); font-size: 13px; margin-bottom: 8px; }
+
+/* "link coming at launch" — a pending App Store link, marked as pending rather
+   than left as plain text that reads like a dead end. */
+.soon {
+  font-size: .88em;
+  color: var(--text-3);
+  white-space: nowrap;
+}

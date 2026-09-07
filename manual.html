@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MicFox — Manual</title>
 <meta name="description" content="How to set up and use MicFox.">
+<link rel="icon" href="micfox-mark.png" type="image/png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <a class="brand" href="./"><span class="mark">🦊</span> MicFox</a>
+    <a class="brand" href="./"><img class="mark" src="micfox-mark.png" alt="" width="26" height="26"> MicFox</a>
     <nav>
       <a href="./">Home</a>
       <a href="manual.html">Manual</a>
@@ -23,7 +24,7 @@
 
 <main class="wrap doc">
   <h1>Manual</h1>
-  <p class="updated">MicFox 1.0</p>
+  <p class="updated">MicFox 1.5.6 &middot; Windows 10/11 &middot; iPhone (iOS&nbsp;15+)</p>
 
   <h2>1 · On the computer</h2>
   <ol>
@@ -44,7 +45,9 @@
 
   <h2>2 · On the phone</h2>
   <ol>
-    <li>Install the app and open it.</li>
+    <!-- TODO: put the App Store URL in the href below and delete the note. -->
+    <li>Install <strong>MicFox</strong> from the App&nbsp;Store
+      <span class="soon">(link coming at launch)</span> and open it.</li>
     <li>Tap <strong>“Connect to your computer”</strong> →
       <strong>“Pair a computer”</strong> and <strong>type the 3-digit
       number</strong> shown on the computer. Same Wi-Fi. This pairs the two —
@@ -93,6 +96,31 @@
   <p>The meeting app's microphone must be set to <strong>“CABLE Output
     (VB‑Audio Virtual Cable)”</strong>, and MicFox's output device (in the
     computer app) must be <strong>“CABLE Input”</strong>.</p>
+
+  <h3>I hear myself twice in OBS</h3>
+  <p>OBS starts every scene collection with a <strong>“Mic/Aux”</strong> and a
+    <strong>“Desktop Audio”</strong> source, both set to “Default”. Once
+    CABLE&nbsp;Output is your default microphone, Mic/Aux picks up the same
+    audio your capture source already has — two copies of your voice, a
+    fraction of a second apart. In the OBS <em>Audio Mixer</em>, mute or remove
+    Mic/Aux and Desktop Audio, and leave only the source set to CABLE&nbsp;Output.</p>
+
+  <h3>The picture lags behind the sound</h3>
+  <p>OBS turns on <strong>Buffering</strong> for video capture devices by
+    default, which holds frames back and shows as visible delay on a live
+    camera. Right-click the <em>MicFox Camera</em> source →
+    <strong>Properties</strong> → set <strong>Buffering</strong> to
+    <strong>Disable</strong>.</p>
+  <p>If a little offset is left, OBS can remove it directly: right-click the
+    audio source → <strong>Advanced Audio Properties</strong> →
+    <strong>Sync Offset</strong>. Positive milliseconds delay the sound, which
+    is the direction you usually want.</p>
+
+  <h3>The camera stops when I switch apps</h3>
+  <p>That is iOS, not MicFox: no app is allowed to hold the camera while it is
+    in the background. The <em>microphone</em> keeps streaming, so a call or a
+    stream carries on with audio; the picture resumes the moment you come back
+    to MicFox.</p>
 
   <h2>Contact</h2>
   <p><a href="mailto:mericorhayy@gmail.com">mericorhayy@gmail.com</a> · use

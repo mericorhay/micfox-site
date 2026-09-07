@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MicFox — your phone as a studio mic &amp; webcam</title>
 <meta name="description" content="MicFox streams your phone's microphone and camera to your computer, end-to-end encrypted, over Wi-Fi or a USB cable.">
+<link rel="icon" href="micfox-mark.png" type="image/png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <a class="brand" href="./"><span class="mark">🦊</span> MicFox</a>
+    <a class="brand" href="./"><img class="mark" src="micfox-mark.png" alt="" width="26" height="26"> MicFox</a>
     <nav>
       <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
@@ -31,7 +32,7 @@
       up as a normal microphone and camera, so OBS, Zoom, Discord, Teams and your
       browser just work.</p>
     <div class="cta-row">
-      <a class="btn primary" href="download/MicFox-1.5.6-Setup.exe">Download</a>
+      <a class="btn primary" href="download/MicFox-1.5.6-Setup.exe">Download for Windows</a>
       <a class="btn" href="manual.html">Read the manual</a>
     </div>
   </div>
@@ -66,8 +67,9 @@
       </div>
       <div class="card">
         <h3>Set&nbsp;&amp;&nbsp;forget</h3>
-        <p>Auto‑reconnect, start with Windows, and a foreground service so
-          switching apps doesn't cut the stream.</p>
+        <p>Auto‑reconnect, start with Windows, and the microphone keeps
+          streaming while you are in another app. (iOS pauses the
+          <em>camera</em> in the background — no app can hold it there.)</p>
       </div>
     </div>
   </section>
@@ -84,12 +86,16 @@
         <tr><td>Phone as mic · Wi‑Fi + USB · reconnect</td><td class="tick">✓</td><td class="tick">✓</td><td class="tick">✓</td></tr>
         <tr><td>Ads</td><td>shown</td><td>removed</td><td>removed</td></tr>
         <tr><td>Effect chain</td><td>3 slots</td><td>6 slots</td><td>8 slots</td></tr>
+        <tr><td>Camera frame rate</td><td>30 fps</td><td>60 fps</td><td>120 fps</td></tr>
         <tr><td>Neural denoise</td><td>—</td><td class="tick">✓</td><td class="tick">✓</td></tr>
         <tr><td>Parametric EQ · noise gate</td><td>—</td><td>—</td><td class="tick">✓</td></tr>
         <tr><td>Camera capture quality</td><td>720p</td><td>1080p</td><td>4K</td></tr>
       </tbody>
     </table>
-    <p style="margin-top:14px">Purchases restore across your devices through the
+    <p style="margin-top:14px">Already on Plus? The step up to Pro is
+      <strong>$2.99</strong>, not the full price &mdash; the app offers it
+      automatically.</p>
+    <p>Purchases restore across your devices through the
       App&nbsp;Store / Google&nbsp;Play.</p>
   </section>
 
@@ -101,7 +107,9 @@
         on the computer. For the mic, also install
         <a href="https://vb-audio.com/Cable/"><strong>VB‑CABLE</strong></a>
         (free virtual audio device).</li>
-      <li>Install the <strong>phone app</strong>.</li>
+      <!-- TODO: put the App Store URL in the href below and delete the note. -->
+      <li>Install <strong>MicFox</strong> on your iPhone from the App&nbsp;Store
+        <span class="soon">(link coming at launch)</span>.</li>
       <li>Open the computer app; on the phone, tap Connect and type the 3-digit number it shows.</li>
     </ol>
     <p>Full steps, including the virtual camera, are in the
